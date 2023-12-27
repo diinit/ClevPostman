@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "hidden",
+		"name": "PochDNPostman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32020990"
+	},
+	"item": [
+		{
+			"name": "Page 0-200 + sort by title",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}news?pageNo=0&pageSize=200&sortBy=title",
+					"host": [
+						"{{url}}news"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "200"
+						},
+						{
+							"key": "sortBy",
+							"value": "title"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page 0-5 + Sort by id ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}news?keyword=%25%25&pageNo=0&pageSize=5&sortBy=id",
+					"host": [
+						"{{url}}news"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "%25%25"
+						},
+						{
+							"key": "pageNo",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						},
+						{
+							"key": "sortBy",
+							"value": "id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New news",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"title\": \"Новый подкаст у Соколовского. Дата: 28.12.23\",\n        \"text\": \"Игорь Лазарев - прекрасный врач-психиатр-нарколог, с котором мы глубоко разобрали тему алкоголя, курения и наркотиков.Мы поговорили про кальяны, пластиковые курилки,«флешки», сигареты, разные виды алкоголя, травку, грибы, кокаин и прочие вещества, которые очень распространены в современном мире.\",\n        \"userName\": \"Почерняева Д.Н.\"\n  }\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}news"
+			},
+			"response": []
+		},
+		{
+			"name": "My news 118",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}news/118"
+			},
+			"response": []
+		}
+	]
+}
